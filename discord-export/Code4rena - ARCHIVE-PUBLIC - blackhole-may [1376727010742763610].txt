@@ -1,0 +1,115 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / blackhole-may
+==============================================================
+
+[05/27/2025 18:03] kartoonjoy (pinned)
+👋 Hello and welcome to the **$28,000 in USDC Blackhole** audit channel!
+
+📆 Audit opens 05/28/2025 20:00 (20:00 UTC) and runs through 06/09/2025 20:00 (20:00 UTC) (12 days).
+
+Please give a warm welcome to the **Blackhole** team, particularly @liberty_0689, @Miteee, and @sandeepsingh, who will be available for questions either here in the channel or via a PRIVATE thread in the IST timezone(s). 
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try, by tagging `@Docs Wolf` in a thread and asking your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources. *Docs Wolf will be available when the audit is live.*
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: <https://code4rena.com/audits/2025-05-blackhole>
+
+{Reactions}
+🔥 (4) 
+
+[05/27/2025 18:08] kartoonjoy
+Pinned a message.
+
+
+[05/30/2025 08:47] kartoonjoy
+ℹ️  PoC is optional (though recommended) for this audit.
+
+{Reactions}
+👍 (16) 
+
+[06/09/2025 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **Blackhole** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks.
+
+
+[06/17/2025 21:17] kartoonjoy
+🤑 🎉  Awards for **Blackhole**:
+
+$4,917.13 USDC » @hakunamatata
+$4,265.00 USDC » @rayss
+$1,064.69 USDC » @MaxZuvex
+$1,012.79 USDC » PolarizedLight (@ChaseTheLight and @Auditor-Nate)
+$956.59 USDC » @Zeroom
+$849.94 USDC » @rashmor
+$828.38 USDC » @KineticsOfWeb3
+$760.16 USDC » @newspace
+$760.16 USDC » @Spectral
+$760.16 USDC » @0x15
+$585.08 USDC » @Egbe
+$379.09 USDC » @DDEENNY
+$350.07 USDC » @EightySix
+$323.07 USDC » @ZZhelev
+$323.07 USDC » @Maze
+$302.51 USDC » NexusAudits (@cheatc0d3 and @zxnnx)
+$275.51 USDC » @AvantGard
+$248.51 USDC » @ekene
+$248.51 USDC » @cu5t0mpeo
+$201.87 USDC » @0xcodeX
+$183.07 USDC » @vesko210
+$123.33 USDC » @lonelybones
+$115.05 USDC » @holtzzx
+$104.02 USDC » @francoHacker
+$97.71 USDC » @IzuMan
+$89.78 USDC » @rmrf480
+$84.21 USDC » @K42 Ψ
+$61.05 USDC » @Akxai
+$56.02 USDC » @JimDarkeEE
+$56.02 USDC » @kisal96
+$56.02 USDC » @Bareli
+$56.02 USDC » @Ziusz
+$54.00 USDC » @Sparrow
+$47.83 USDC » @mahakal
+$33.82 USDC » @Rorschach
+$33.82 USDC » @Pocas
+$30.41 USDC » @Bareli
+$28.01 USDC » @Kariukii
+$14.01 USDC » @wankunda john
+$13.50 USDC » @Alex Zhang
+
+🏁 Findings summary
+--------------------------------------—
+3 High risk findings
+21 Med risk findings
+926 wardens participated
+
+Top Hunter: hakunamatata
+Top Gatherer: rayss
+Top QA report: rayss
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to [complete your tax reporting info](https://docs.code4rena.com/awarding/incentive-model-and-awards/awarding-process#tax-information-for-code4rena-contributors-wardens-judges-etc) if you haven't already. This must be completed within 30 days (i.e. before [🔴 insert hammertime for 30 days]) to receive your award distribution for this audit.
+
+{Embed}
+https://docs.code4rena.com/awarding/incentive-model-and-awards/awarding-process
+Awarding process | Code4rena
+
+{Reactions}
+🎉 (11) c4ship (5) ✅ (5) 🔥 (8) 🫡 (2) clapping (2) 🦾 ❤️ 
+
+[08/22/2025 15:45] C4
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted 08/29/2025 15:39. Please make sure to grab anything you might need before then.
+
+
+[08/28/2025 16:35] C4
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 7 message(s)
+==============================================================
