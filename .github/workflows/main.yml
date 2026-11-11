@@ -1,0 +1,83 @@
+name: Local smart-contract audit checks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audit-checks-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  hardhat:
+    name: Compile and run local Hardhat tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Throwaway deterministic key required only because the project config
+      # constructs network accounts at load time. Never used to sign/broadcast.
+      PRIVATEKEY: 0000000000000000000000000000000000000000000000000000000000000001
+      APIKEY: ""
+      CI: "true"
+    steps:
+      - name: Check out selected ref
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22.11.0
+
+      - name: Install dependencies
+        run: npm install --no-package-lock --no-audit --no-fund
+
+      - name: Compile contracts
+        id: compile
+        shell: bash
+        run: |
+          set +e
+          npx hardhat compile 2>&1 | tee compile.log
+          rc=${PIPESTATUS[0]}
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+
+      - name: Run Hardhat tests
+        id: tests
+        if: always() && steps.compile.outcome == 'success'
+        shell: bash
+        run: |
+          set +e
+          npx hardhat test 2>&1 | tee test.log
+          rc=${PIPESTATUS[0]}
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+
+      - name: Record runner metadata
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "Commit: $GITHUB_SHA"
+            echo "Ref: $GITHUB_REF"
+            echo "Node: $(node --version 2>&1 || true)"
+            echo "npm: $(npm --version 2>&1 || true)"
+            echo "Hardhat: $(npx hardhat --version 2>&1 || true)"
+            echo "Compile step outcome: ${{ steps.compile.outcome }}"
+            echo "Test step outcome: ${{ steps.tests.outcome }}"
+          } > runner-metadata.txt
+
+      - name: Upload logs and metadata
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: blackhole-audit-run-${{ github.run_id }}
+          path: |
+            compile.log
+            test.log
+            runner-metadata.txt
+          if-no-files-found: warn
+          retention-days: 14
